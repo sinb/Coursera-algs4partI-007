@@ -12,9 +12,10 @@ public class Percolation {
 	private int N;
 	public Percolation(int N) { //N-by-N grid
 		this.N = N;
-		wquf = new WeightedQuickUnionUF(N*N+2); //there are to virtual site
+		wquf = new WeightedQuickUnionUF(N*N+2); //there are two virtual sites
+		//on the top which locates [N*N] and bottom which is [N*N+1]		
 		wquf2 = new WeightedQuickUnionUF(N*N+1); // no virtual bottom
-		//on the top which locates [N*N] and bottom which is [N*N+1]
+		
 		grid = new int[N*N];    //is an array in reality
 	}
 	/**
